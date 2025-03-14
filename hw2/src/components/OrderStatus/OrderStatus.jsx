@@ -1,10 +1,11 @@
-import OrderStatusCard from "./OrderStatusCard"
-const OrderStatus = ({ item }) => {
-    const element = item.map((item, index) => <OrderStatusCard key={index} orderId={item.orderId} status={item.status} />)
+
+const OrderStatus = ({ orderId, status }) => {
+
     return (
         <>
-            <h2>Компонент Статуса Заказа</h2>
-            {element}
+            <div>
+                <h2>Заказ # {orderId} : {status} </h2>
+            </div>
         </>
     )
 }
