@@ -1,5 +1,5 @@
 import { Rating } from '../Rating/Rating'
-import List from '../List/List'
+import List from '../List/List.jsx'
 
 import './App.css'
 
