@@ -1,0 +1,48 @@
+.divFooter {
+    border: 0.188rem solid #1ED760;
+    border-radius: 4.063rem;
+    width: 27.875rem;
+    position: relative;
+    left: 550px;
+    display: flex;
+    gap: 1.125rem;
+    justify-content: center;
+    top: 1.94rem;
+    height: 10.938rem;
+}
+
+.divFooter img {
+    width: 6.125rem;
+    height: 6.125rem;
+}
+
+.btn {
+    background-color: #0C0417;
+    border: none;
+    border-radius: 1.5rem;
+
+}
+
+.divFooter img:hover {
+    filter: invert(80%) sepia(100%) saturate(500%) hue-rotate(180deg)
+}
+@media screen and (max-width:700px) {
+    .divFooter {
+        width: 80%; 
+        left: 2rem; 
+        top: 1rem; 
+        height: auto; 
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .divFooter img {
+        width: 5rem; 
+        height: 5rem; 
+    }
+    .btn {
+        width: 50%; 
+        font-size: 16px; 
+    }
+}

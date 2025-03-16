@@ -1,0 +1,40 @@
+.h1Title {
+    padding: 6.95rem 23rem 0px;
+    width: 971px;
+    font-size: 3rem;
+}
+
+.mainButton {
+    width: 6.813rem;
+    background-color: #0C0417;
+    color: #1ED760;
+    border: none;
+    position: relative;
+    left: 44rem;
+    width: 8.5rem;
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+@media screen and (max-width:700px) {
+
+    .h1Title {
+        padding: 3rem 2rem 0;
+        /* Уменьшаем отступы для заголовка */
+        font-size: 2.5rem;
+        /* Уменьшаем размер шрифта */
+        width: 100%;
+        /* Ширина заголовка 100% */
+    }
+
+    .mainButton {
+        width: 100%;
+        /* Кнопка будет шириной 100% */
+        font-size: 24px;
+        /* Уменьшаем размер шрифта */
+        left: 0;
+        /* Убираем отступ слева */
+        margin-top: 1rem;
+        /* Добавляем отступ сверху */
+    }
+}

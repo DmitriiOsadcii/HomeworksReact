@@ -1,0 +1,40 @@
+.spotify {
+    width: 2.714rem;
+}
+
+.headerTitle {
+    color: #1ED760;
+    font-weight: bolder;
+
+}
+
+.headerDiv {
+    display: flex;
+    width: 8.723rem;
+    gap: 0.409rem;
+    padding-top: 3.438rem;
+    padding-left: 2.188rem;
+}
+
+@media screen and (max-width:700px) {
+    .spotify {
+        width: 2rem;
+        /* Уменьшаем размер иконки Spotify */
+    }
+
+    .headerDiv {
+        padding-left: 1rem;
+        /* Уменьшаем отступ слева */
+        padding-top: 1rem;
+        /* Уменьшаем отступ сверху */
+        width: 90%;
+        /* Убираем фиксированную ширину */
+        gap: 1rem;
+        /* Увеличиваем расстояние между элементами */
+    }
+
+    .headerTitle {
+        font-size: 1.5rem;
+
+    }
+}
