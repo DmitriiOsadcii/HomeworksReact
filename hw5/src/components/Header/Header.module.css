@@ -19,18 +19,18 @@
 @media screen and (max-width:700px) {
     .spotify {
         width: 2rem;
-        /* Уменьшаем размер иконки Spotify */
+        
     }
 
     .headerDiv {
         padding-left: 1rem;
-        /* Уменьшаем отступ слева */
+
         padding-top: 1rem;
-        /* Уменьшаем отступ сверху */
+
         width: 90%;
-        /* Убираем фиксированную ширину */
+
         gap: 1rem;
-        /* Увеличиваем расстояние между элементами */
+
     }
 
     .headerTitle {

@@ -1,5 +1,5 @@
 const CityCard = ({ city }) => {
-    if (!city) return null;
+    // if (!city) return 
   
     return (
       <div >

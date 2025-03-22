@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
 import CityCard from '../CityCard/CityCard'
-import CitySelector from '../CityCard/CitySelector'
-import cities from '../../components/CityCard/CityCelector'
+import CitySelector from '../CitySelector/CitySelector'
+import cities from '../../components/CityCelector'
 import MathQuiz from '../MathQuiz/MathQuiz'
 import Answer from '../MathQuiz/Answer'
 
@@ -12,13 +12,13 @@ import './App.css'
 const citiesData = [...cities];
 function App() {
 
-  const [selectedCity, setSelectedCity] = useState(null);
+  const [selectedCity, setSelectedCity] = useState(citiesData[0]);
 
   const handleCitySelect = (cityName) => {
     const city = citiesData.find((city) => city.name === cityName);
     setSelectedCity(city);
   };
-  
+
 
   return (
     <>

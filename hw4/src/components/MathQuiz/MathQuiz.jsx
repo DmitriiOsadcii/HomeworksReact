@@ -4,21 +4,23 @@ const MathQuiz = () => {
     const expression = {
         a: Math.floor(Math.random() * 100),
         b: Math.floor(Math.random() * 100),
-        result: function () {
+        get result() {
             return this.a + this.b
         }
     }
     const [points, setPoints] = useState(0)
 
     const updatePoints = (answer) => {
-        const correctAnswer = expression.a + expression.b;
-        const isCorrect = parseInt(answer) === correctAnswer;
-        if (isCorrect) {
-            setPoints(points + 5);
-        } else {
-            setPoints(points - 5);
-        }
+        const correctAnswer = expression.result
 
+        const parsedAnswer = parseInt(answer);
+        const isCorrect = Number.isInteger(parsedAnswer) && parsedAnswer === correctAnswer;
+
+        if (isCorrect) {
+            setPoints(prevState => prevState + 5);
+        } else {
+            setPoints(prevState => prevState - 5);
+        }
     }
 
     return (
