@@ -7,32 +7,7 @@ const UserProfile = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null)
 
-    useEffect(() => {
-        const fetchUser = async () => {
-            try {
-                setLoading(true);
-                setStateUser({});
-                const { data } = await axios.get("https://randomuser.me/api");
-                const userData = data.results[0];
-                setStateUser({
-                    name: `${userData.name.first} ${userData.name.last}`,
-                    picture: userData.picture.medium,
-                    email: userData.email,
-                    phone: userData.phone,
-                });
-
-            }
-            catch (error) {
-                setError(error.message)
-            }
-            finally {
-                setLoading(false)
-            }
-        }
-        fetchUser()
-    }, [])
-
-    const showNextUser = async () => {
+    const fetchUser = async () => {
         try {
             setLoading(true);
             setStateUser({});
@@ -55,6 +30,12 @@ const UserProfile = () => {
     }
 
 
+    useEffect(() => {
+        fetchUser()
+    }, [])
+
+
+
     return (
         <div>
             <div>
@@ -69,7 +50,7 @@ const UserProfile = () => {
                 <p>Email: {stateUser.email}</p>
                 <p>Phone: {stateUser.phone}</p>
             </div>
-            <button onClick={showNextUser}>Show next User</button>
+            <button onClick={fetchUser}>Show next User</button>
         </div>
     )
 }
