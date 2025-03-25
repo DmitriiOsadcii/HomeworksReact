@@ -11,18 +11,16 @@ const MathQuiz = () => {
     const [points, setPoints] = useState(0)
 
     const updatePoints = (answer) => {
-        const correctAnswer = expression.result
-
+        const correctAnswer = expression.result;
         const parsedAnswer = parseInt(answer);
-        const isCorrect = Number.isInteger(parsedAnswer) && parsedAnswer === correctAnswer;
 
-        if (isCorrect) {
+        // Проверка на NaN и сравнение с правильным ответом
+        if (parsedAnswer === correctAnswer) {
             setPoints(prevState => prevState + 5);
         } else {
             setPoints(prevState => prevState - 5);
         }
     }
-
     return (
         <div>
             <h4>Ваши очки: {points}</h4>
