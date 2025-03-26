@@ -17,14 +17,13 @@ const ListItem = () => {
     const handleChange = (event) => {
         setInputValue(event.target.value)
     }
-    // console.log(inputValue);
 
 
     const elements = items.map(item => <li key={item}>{item}</li>)
     return (
 
         <div>
-            <textarea onChange={handleChange} value={inputValue} name="textAr" id="textAr" required='Введите что-то'></textarea>
+            <textarea onChange={handleChange} value={inputValue}></textarea>
             <button onClick={addItem}>Добавить</button>
             <ul>
                 {elements}

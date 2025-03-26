@@ -2,8 +2,8 @@ import Answer from "./Answer";
 import { useState } from "react";
 const MathQuiz = () => {
     const expression = {
-        a: Math.floor(Math.random() * 100),
-        b: Math.floor(Math.random() * 100),
+        a: Math.floor(Math.random() * 10),
+        b: Math.floor(Math.random() * 10),
         get result() {
             return this.a + this.b
         }
@@ -12,10 +12,9 @@ const MathQuiz = () => {
 
     const updatePoints = (answer) => {
         const correctAnswer = expression.result;
-        const parsedAnswer = parseInt(answer);
+        const result = Number(answer);
 
-        // Проверка на NaN и сравнение с правильным ответом
-        if (parsedAnswer === correctAnswer) {
+        if (result === correctAnswer) {
             setPoints(prevState => prevState + 5);
         } else {
             setPoints(prevState => prevState - 5);
