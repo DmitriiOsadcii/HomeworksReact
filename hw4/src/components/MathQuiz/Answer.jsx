@@ -7,6 +7,7 @@ const Answer = ({ updatePoints }) => {
         e.preventDefault();
         updatePoints(value);
         setValue('')
+        console.log(value);
         
     }
     return (
