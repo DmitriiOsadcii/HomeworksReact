@@ -1,0 +1,40 @@
+p {
+    color: red;
+    font-size: x-small;
+
+}
+
+.main {
+    background-color: rgb(191, 214, 214);
+    display: inline-block;
+    gap: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+button {
+    margin-top: 20px;
+    border: none;
+    background-color: rgb(39, 41, 41);
+    color: aliceblue;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    position: relative;
+    bottom: 3px;
+    cursor: pointer;
+}
+
+button:active {
+    color: black;
+    background-color: aliceblue;
+}
+
+input {
+    border: 1px solid rgb(172, 219, 157);
+}
+body{
+    background-color: rgb(184, 200, 223);
+}
