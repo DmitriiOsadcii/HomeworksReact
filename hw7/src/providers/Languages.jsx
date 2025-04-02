@@ -6,11 +6,11 @@ import MainDiv from "../components/MainDiv/MainDiv";
 export const LanguagesContext = createContext();
 
 
-
 const Languages = ({ children }) => {
 
 
-    const [language, setLanguage] = useState(0)
+    const [language, setLanguage] = useState('russian')
+
 
 
     return (
