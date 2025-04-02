@@ -1,0 +1,22 @@
+img {
+    width: 700px;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+button{
+    position: relative;
+    right: 425px;
+    top: 100px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgb(23, 23, 214);
+    color: aliceblue;
+}
+h1{
+    position: relative;
+    left: 200px;
+}
