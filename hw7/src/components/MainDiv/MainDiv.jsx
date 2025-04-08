@@ -6,7 +6,7 @@ import { arr } from "../../data/data";
 
 const MainDiv = () => {
 
-    const [language] = useContext(LanguagesContext);
+    const {language} = useContext(LanguagesContext);
 
     
     const currentLanguage = arr.find((item) => item.language === language);
