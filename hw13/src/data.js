@@ -1,0 +1,1 @@
+export const people = [{ id: 1, name: "Elena" }, { id: 2, name: "Peotr" }, { id: 3, name: "Ghenadii" }, { id: 4, name: "Cosmin" }, { id: 5, name: "Dmitrii" }, { id: 6, name: "Ecaterina" }, { id: 7, name: "Gleb" }, { id: 8, name: "Anton" }, { id: 9, name: "Pavel" }, { id: 10, name: "Timofei" }, { id: 11, name: "Andrei" }, { id: 12, name: "Nicolai" }]
