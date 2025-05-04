@@ -3,18 +3,19 @@ import { useForm } from 'react-hook-form';
 
 const DynamicForm = () => {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm({
+    const { register, handleSubmit, watch, reset, formState: { errors } } = useForm({
         mode: "onBlur"
     });
 
-    const onSubmit = () => {
-
+    const onSubmit = (values) => {
+        console.log(values);
+        reset();
     }
     const name = watch('name');
 
     return (
         <>
-            {name ? (
+            {name && name.length >= 5 && !errors.name ? (
                 <form className={styles.main} onSubmit={handleSubmit(onSubmit)}>
                     <div>
                         <h2>Введите логин</h2>
