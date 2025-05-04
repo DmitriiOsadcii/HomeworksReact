@@ -12,13 +12,15 @@ const Languages = ({ children }) => {
     const [language, setLanguage] = useState('russian');
 
     const changeLanguage = () => {
-        const currentIndex = arr.findIndex((item) => item.language === language);
-        const nextIndex = (currentIndex + 1) % arr.length;
-        setLanguage(arr[nextIndex].language)
+        setLanguage((prevLanguage) => {
+            const currentIndex = arr.findIndex((item) => item.language === prevLanguage);
+            const nextIndex = (currentIndex + 1) % arr.length;
+            return arr[nextIndex].language;
+        });
     };
 
     return (
-        <LanguagesContext.Provider value={{language, setLanguage, changeLanguage}}>
+        <LanguagesContext.Provider value={{ language, setLanguage, changeLanguage }}>
             {children}
         </LanguagesContext.Provider>
 
