@@ -1,0 +1,1 @@
+export const quoteSelect = store => store.quote;
